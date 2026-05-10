@@ -12,7 +12,7 @@ A command-line utility for matching files and directories using glob patterns wi
 Either copy the executable file to target directory or define path. If no path is defined, the running directory is used.
 
 ### Arguments:
-
+---
 - -path \<directory> or -p \<directory> : Define path to target directory.
   - PatchMatcher -p "D:\Your`Path\Here"
 - -patterns \<value> : Expects a comma separated list of glob patterns.
