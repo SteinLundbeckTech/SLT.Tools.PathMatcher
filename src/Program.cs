@@ -98,26 +98,36 @@ else
         {
             Console.WriteLine($"Found {rs.Files.Count()} matches.");
             Console.WriteLine();
+            ICollection<string> paths = [];
+
+            foreach (FilePatternMatch file in rs.Files)
+            {
+                paths.Add($"{Path.Combine(dir.FullName, file.Path.Replace("/", "\\"))}");
+            }
 
             if (args.Any(a => a.Equals("-list")) || args.Any(a => a.Equals("-l")))
             {
                 Console.WriteLine("Matches:");
                 WriteSectionLine();
 
-                foreach (FilePatternMatch file in rs.Files)
-                    Console.WriteLine($"\t{Path.Combine(dir.FullName, file.Path)}");
+                foreach (string pth in paths)
+                {
+                    Console.WriteLine($"\t{pth}");
+                }
             }
 
             if ((args.Any(a => a.Equals("-copy")) || args.Any(a => a.Equals("-c"))))
             {
-                string tmp = string.Empty;
+                string toCopy = string.Empty;
 
-                foreach (FilePatternMatch file in rs.Files)
-                    tmp += $"{wrap}{Path.Combine(dir.FullName, file.Path)}{wrap}, ";
+                foreach (string p in paths)
+                {
+                    toCopy += $"{wrap}{p}{wrap}, ";
+                }
 
-                tmp = tmp.TrimEnd(' ', ',');
+                toCopy = toCopy.TrimEnd(',', ' ');
 
-                ClipboardService.SetText(tmp);
+                ClipboardService.SetText(toCopy);
                 WriteSectionLine();
                 Console.WriteLine("Copied to clipboard.");
             }
