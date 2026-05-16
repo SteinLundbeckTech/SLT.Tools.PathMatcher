@@ -16,3 +16,5 @@ foreach ($profile in $profiles) {
     Write-Host "Publishing $($project.Name) using profile $profileName ..."
     dotnet publish $project.FullName -c Release /p:PublishProfile=$profileName
 }
+
+exit 1
