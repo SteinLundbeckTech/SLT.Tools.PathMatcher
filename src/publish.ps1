@@ -7,6 +7,7 @@ if (-not $profiles) {
 
 foreach ($profile in $profiles) {
     $project = Get-ChildItem -Path $profile.Directory.Parent.Parent.FullName -Filter *.csproj | Select-Object -First 1
+    
     if (-not $project) {
         Write-Warning "No project file found for profile: $($profile.FullName)"
         continue
