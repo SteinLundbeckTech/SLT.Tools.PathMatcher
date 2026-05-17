@@ -2,7 +2,7 @@
   "profiles": {
     "SLT.Tools.PathMatcher": {
       "commandName": "Project",
-      "commandLineArgs": "-copy -list -path \"D:\\GoogleDrive\\My Content\\My Projects\\SLT\\Assets\\SLT.Assets\" -patterns \"./Data/**/*\",\"./Extensions/Local/**/*\",\"./Components/Exceptions/**/*\",\"./omponents/Models*/**/*\",\"./Components/Options/**/*\",\"/Components/Setup/**/*\",\"./Components/TagHelpers/**/*\",\"./Components/Tools/**/*\" -w '"
+      "commandLineArgs": "-p \"D:\\GoogleDrive\\My Content\\My Projects\\SLT\\Assets\\SLT.Assets\" -c -w ` -l -e \"./Data/Mdoels/**/*\" -patterns \"./Assets.cs, ./Components/Exceptions/**/*, ./Components/Models/**/*, ./Components/Options/**/*, ./Components/Secure/**/*, ./Components/Setup/**/*, ./Components/Site/**/*, ./Components/Tech/AssetsAccessor.cs, ./Components/Tech/AssetsDisposeable.cs, ./Components/Tech/AssetsFactory.cs, ./Components/Tech/AssetsIPAddress.cs, ./Components/Tech/AssetsMiddleware.cs, ./Components/Tech/AssetsModel.cs, ./Components/Tech/AssetsRepo.cs, ./Components/Tech/AssetsUtility.cs, ./Components/Tech/EntityMapper.cs, ./Components/Tech/EntityMapperRegister.cs, ./Components/Tech/ErrorHandler.cs, ./Components/Tech/TagUtility.cs, ./Components/Tools/**/*, ./Components/CommonAccessor.cs, ./Components/FileTypeInfo.cs, ./Components/LogParams.cs, ./Components/TimerHelper.cs, ./Data/**/*\""
     }
   }
 }

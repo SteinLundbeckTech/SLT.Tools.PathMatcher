@@ -1,4 +1,5 @@
 $profiles = Get-ChildItem -Path . -Recurse -Filter *.pubxml | Where-Object { $_.FullName -match "PublishProfiles" }
+$count = 0;
 
 if (-not $profiles) {
     Write-Host "No publish profiles found."
@@ -14,8 +15,12 @@ foreach ($profile in $profiles) {
     }
 
     $profileName = [System.IO.Path]::GetFileNameWithoutExtension($profile.Name)
-    Write-Host "Publishing $($project.Name) using profile $profileName ..."
+    Write-Host "Publishing $($project.Name) using profile $profileName "
     dotnet publish $project.FullName -c Release /p:PublishProfile=$profileName
+    $count++;
 }
 
-exit 1
+Write-Host "Published project using $count profile(s).";
+
+Read-Host "Press Enter to exit publish...";
+exit 0;

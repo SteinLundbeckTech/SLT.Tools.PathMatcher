@@ -125,7 +125,7 @@ else
                     toCopy += $"{wrap}{p}{wrap}, ";
                 }
 
-                toCopy = toCopy.TrimEnd(',', ' ');
+                toCopy = toCopy.TrimEnd().TrimEnd(',');
 
                 ClipboardService.SetText(toCopy);
                 WriteSectionLine();

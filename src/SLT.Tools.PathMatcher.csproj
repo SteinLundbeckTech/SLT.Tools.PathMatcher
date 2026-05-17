@@ -5,8 +5,9 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyVersion>2.0.0.63</AssemblyVersion>
-    <FileVersion>2.0.0.63</FileVersion>
+    <AssemblyVersion>2.0.0.68</AssemblyVersion>
+    <FileVersion>2.0.0.68</FileVersion>
+    <UserSecretsId>0cf0ae08-567e-4ea9-bfa4-eb036f650426</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
